@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Actor" representedClassName="Actor" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="movies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Movie" inverseName="actor" inverseEntity="Movie" syncable="YES"/>
+    </entity>
+    <entity name="Movie" representedClassName="Movie" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="thumbnailImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="actor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Actor" inverseName="movies" inverseEntity="Actor" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Movie" positionX="189" positionY="38" width="128" height="133"/>
+        <element name="Actor" positionX="412" positionY="162" width="128" height="88"/>
+    </elements>
+</model>
