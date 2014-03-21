@@ -1,0 +1,1 @@
+Ketchup is a test project for iPhone / iOS 7. It fetches a list of movies from Rotten Tomatoes. Using an infinite scrolling UITableView. Scrolling will update the table automatically and asychronously.
